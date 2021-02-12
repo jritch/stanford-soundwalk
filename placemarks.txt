@@ -1,0 +1,72 @@
+<Placemark>
+        <name>1 University Avenue, Palo Alto, CA, USA</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -122.1655966,37.4416932,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>50-28 Palm Drive, Stanford, CA, USA</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -122.1667965,37.437937,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Angel of Grief, Palo Alto, CA, USA</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -122.1688938,37.4373239,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Stanford Mausoleum, Palo Alto, CA, USA</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -122.1698852,37.4364654,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cactus Garden Path, Palo Alto, CA 94304, USA</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -122.1714515,37.4358953,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cactus Garden Path, Palo Alto, CA 94304, USA</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -122.1708413,37.4357365,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Palm Drive & Campus Drive, Stanford, CA, USA]]></name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -122.1678971,37.4345969,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>1 University Avenue, Palo Alto, CA, USA</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -122.1656117,37.441669,0
+          </coordinates>
+        </Point>
+      </Placemark>
