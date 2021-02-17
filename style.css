@@ -2,7 +2,42 @@ body {
     padding: 0;
     margin: 0;
 }
+
 html, body, #map {
+    position: relative;
     height: 100%;
     width: 100vw;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+    pointer-events: auto;
+    /*border: 1px solid grey;*/
+}
+
+.icon-container {
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+    z-index: 314159;
+    pointer-events: none;
+    border-radius: 2px;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+}
+
+.start-button {
+    position: absolute;
+    bottom: 45%;
+    left: 45%;
+    z-index: 314159;
+    border-radius: 10px;
+    background-color: aliceblue;
+    padding: 10px;
+    font: bold xx-large 'Lucida Console', Monaco, monospace;
+    border: 1px solid grey;
 }
