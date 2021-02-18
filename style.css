@@ -3,22 +3,31 @@ body {
     margin: 0;
 }
 
-html, body, #map {
+html, body, #map, #curtain {
     position: relative;
     height: 100%;
     width: 100vw;
+}
+
+#curtain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 314158;
+    background-color: rgba(0,0,0,.9);
 }
 
 .icon {
     height: 40px;
     width: 40px;
     pointer-events: auto;
-    /*border: 1px solid grey;*/
+    padding:2px;
+    border: 1px solid grey;
 }
 
 .icon-container {
     position: absolute;
-    bottom: 3%;
+    bottom: 6%;
     left: 3%;
     z-index: 314159;
     pointer-events: none;

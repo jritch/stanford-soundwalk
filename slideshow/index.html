@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					Stanford Memorial Soundwalk
+				</section>
+				<section data-background="img/palmdrive1.jpeg">
+					<div style="font-size: 30px; text-align: left;">
+						<h1>Palm Drive</h1> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					</div>
+					<audio data-autoplay src="../audio/haydn1.mp3"></audio>
+				</section>
+				<section data-background="img/angelgrief1.jpg">
+					<div style="font-size: 30px; text-align: left;">
+						<h1>The Angel of Grief</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					</div>
+					<audio data-autoplay src="../audio/bach1.mp3"></audio>
+				</section>
+				<section data-background="img/mausoleum1.jpg">
+					<audio data-autoplay src="../audio/sano1.mp3"></audio>
+				</section>
+				<section data-background="img/garden1.jpg">
+					<audio data-autoplay src="../audio/delius.mp3"></audio>
+				</section>
+				<section data-background="img/griffins1.jpg">
+					<audio data-autoplay src="../audio/bach.mp3"></audio>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
