@@ -3,17 +3,19 @@ body {
     margin: 0;
 }
 
-html, body, #map, #curtain {
-    position: relative;
-    height: 100%;
-    width: 100vw;
+#map, #curtain {
+    height: 500px;
+    width: 80%;
+    margin: auto;
+}
+
+#map {
+    z-index: 0;  
 }
 
 #curtain {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 314158;
+    z-index: 314159;    
+    margin-top: -500px;
     background-color: rgba(0,0,0,.9);
 }
 
@@ -25,18 +27,22 @@ html, body, #map, #curtain {
     border: 1px solid grey;
 }
 
-.icon-container {
-    position: absolute;
-    bottom: 6%;
-    left: 3%;
+.toggle {
     z-index: 314159;
-    pointer-events: none;
+    /*pointer-events: none;*/
     border-radius: 2px;
-    background-color: aliceblue;
+    background-color: #f5f5f5;
+    float: right;
+    padding: 6px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid grey;
+    font: 12px/1.4 Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0px 10px 0px 10px;
+    /*border: 1px solid grey;*/
 }
 
 .start-button {
@@ -49,4 +55,17 @@ html, body, #map, #curtain {
     padding: 10px;
     font: bold xx-large 'Lucida Console', Monaco, monospace;
     border: 1px solid grey;
+    display: none;
 }
+
+.toggle-container {
+    margin-top: 20px;
+    width: 80% !important;
+    margin-left: 10%;
+}
+
+iframe {
+    height: 100px;
+    width: 80%;
+    z-index: 314159;
+  }
