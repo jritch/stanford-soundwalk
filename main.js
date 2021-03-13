@@ -5,9 +5,7 @@
 
 // to be played when you click on the marker or are in the proper position
 points_of_interest =
-    [["Tour Start", [37.4416932,-122.1655966], 20, "intro_browser.mp3",0],
-    ["Palm Drive and Campus Drive", [37.43487591301868, -122.1680102423321], 40, "campus_drive.mp3",0],
-    ["Cactus Garden", [37.43592311670526, -122.17107926201443], 38, "cactus_garden.mp3",0],
+    [["Cactus Garden", [37.43592311670526, -122.17107926201443], 38, "cactus_garden.mp3",0],
     ["Stanford Mausoleum", [37.4364654, -122.1698852], 20, "stanford_mausoleum.mp3",0],
     ["Angel of Grief", [37.4373239, -122.1688938], 20, "angel_of_grief.mp3",0],
     ]
@@ -197,6 +195,14 @@ document.getElementById("button").addEventListener("click", function () {
     }
 });
 
+var elements = document.getElementsByClassName("rounded-circle")
+
+for (let index = 0; index < elements.length; index++) {
+    element = elements[index];
+    element.addEventListener("click", function (event) {
+        event.target.parentNode.classList.add("clicked")
+    });
+}
 
 // if (!rightTime()) {
 //     alert("Soundwalk is only available during daylight hours")
