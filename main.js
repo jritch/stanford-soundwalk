@@ -147,7 +147,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(map);
 
 
-map.setView(new L.LatLng(37.438417408658916, -122.16877133597302), 16);
+map.setView(new L.LatLng(37.438417408658916, -122.1684), 16);
 //map.setView(new L.LatLng(45.37785682716759, -75.6749549661014), 16);
 
 omnivore.kml('soundwalk.kml').addTo(map);
@@ -171,6 +171,16 @@ for (i = 0; i < points_of_interest.length; i++) {
 
     L.marker(latlng, {icon:new_icon}).addTo(map).on('click', audioPlayFactory(item[3]));
 }
+
+
+var new_icon = L.icon({
+    iconUrl: 'icons/arrow.png',
+    iconSize:   [25, 40], // point of the icon which will correspond to marker's location
+    iconAnchor:   [12.5, 40], // point of the icon which will correspond to marker's location
+});
+
+L.marker(new L.LatLng(37.44174,-122.1656), {icon:new_icon}).addTo(map);
+
 
 // // add button behavior
 // document.getElementById("start-button").addEventListener("click", tourStart)

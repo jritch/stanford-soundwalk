@@ -15,6 +15,7 @@ body {
     padding-right: 15px;
     padding-bottom: 15px;
     background-color: #EAEAEA ;
+    position: relative;
 }
 
 .iframe-holder {
@@ -30,7 +31,7 @@ body {
 
 #curtain {
     z-index: 314159;    
-    margin-top: -450px;
+    position:absolute;
     background-color: rgba(0,0,0,.9);
 }
 
@@ -253,6 +254,8 @@ iframe {
       display: table-cell; 
       vertical-align: middle;
 
+      padding-top: 10px;
+      padding-bottom: 10px;
       padding-left: 20px;
     
 
