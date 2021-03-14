@@ -22,7 +22,6 @@ var iframeElement   = document.querySelector('iframe');
 var widget         = SC.Widget(iframeElement);
 
 widget.bind(SC.Widget.Events.PLAY, function() {
-    document.getElementById("curtain").setAttribute("style","display:none");
     if (audio) {
         audio.remove()
     }
@@ -62,6 +61,8 @@ function playNext() {
     //f();
    widget.play()
 };
+
+
 
 // play the intro (for now the first song in the playlist, soon the intro + directions)
 // function tourStart() {
@@ -191,6 +192,10 @@ L.marker(new L.LatLng(37.44174,-122.1656), {icon:new_icon}).addTo(map);
 
 // document.getElementById("pause").addEventListener("click", function () { 
 //     audio = document.getElementById("audio"); audio.pause(); })
+
+
+document.getElementById("stop-button").addEventListener("click", function () { 
+         audio = document.getElementById("audio"); audio.pause(); })
 
 
 
