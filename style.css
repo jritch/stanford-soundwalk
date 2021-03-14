@@ -4,10 +4,25 @@ body {
 }
 
 #map, #curtain {
-    height: 500px;
-    width: 80%;
+    height: 450px;
+    width: 100%;
     margin: auto;
 }
+
+.map-holder {
+    padding: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    background-color: #EAEAEA ;
+}
+
+.iframe-holder {
+    margin-bottom: -5px;
+    padding: 0px;
+    background-color: #EAEAEA;
+}
+
 
 #map {
     z-index: 0;  
@@ -15,7 +30,7 @@ body {
 
 #curtain {
     z-index: 314159;    
-    margin-top: -500px;
+    margin-top: -450px;
     background-color: rgba(0,0,0,.9);
 }
 
@@ -58,15 +73,13 @@ body {
     display: none;
 }
 
-.toggle-container {
-    margin-top: 20px;
-    width: 80% !important;
-    margin-left: 10%;
-}
 
 iframe {
-    height: 100px;
-    width: 80%;
+    height: 120px;
+    width: 100%;
+    padding: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
     z-index: 314159;
   }
 
@@ -112,3 +125,220 @@ iframe {
 .clicked > svg {
     visibility: visible;
   }
+
+.header {
+    background: #8C1515;
+    padding: 24px;
+    width: 100%;
+    font-family: Source Sans Pro;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+}
+
+.footer {
+    background: #2E2D29;
+    width: 100%;
+
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 15px;
+    letter-spacing: -0.005em;
+    text-align: center;
+    color:white;
+
+    padding: 14px 6.6%;
+    
+}
+
+.splash-palm-drive {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),
+     url(icons/CFr-p4-9.png);
+     background-size: cover;
+     background-position: center top;
+
+     padding-left: 24px;
+     color: white;
+     padding-bottom: 35px;
+
+}
+
+.splash-palm-drive > h1 {
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    text-align: left;
+
+    padding-top: 35px;
+}
+
+.splash-palm-drive > .row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+} 
+
+.splash-angel {
+    background-image: url(icons/angel.jpeg);
+     background-size: cover;
+     background-position: center top;
+     height: 260px;
+}
+
+.splash-guy {
+    background-image: url(icons/cactus_guy.jpg);
+     background-size: cover;
+     background-position: left center;
+     height: 167px;  
+     border-right: 2.5px solid #EAEAEA;
+}
+
+.splash-girl {
+    background-image: url(icons/mausoleum_girl.jpg);
+     background-size: cover;
+     background-position: right center;
+     height: 167px;
+     border-left: 2.5px solid #EAEAEA;
+}
+
+.text-section {
+    background-color: #EAEAEA;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding:25px 40px 25px 40px;
+}
+
+.img-bullet-wrapper { 
+    display: table-row; 
+}
+
+.img-bullet {
+  display: table-cell; 
+  vertical-align: top; 
+  margin-right: 10px;
+}
+
+.img-bullet-caption { 
+    display: table-cell; 
+    vertical-align: top;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.arrow-bullet {
+    display: table-cell; 
+    vertical-align: middle; 
+    width: 20px;
+  }
+  
+  .arrow-bullet-caption { 
+      display: table-cell; 
+      vertical-align: middle;
+
+      padding-left: 20px;
+    
+
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 17px;
+      letter-spacing: 0em;
+      text-align: left;      
+  }
+
+.header-caption { 
+    display: table-cell; 
+    vertical-align: middle;
+    font-family: Source Sans Pro;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.header-small {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+
+.credits-footer {
+    background: #767674;
+    width: 100%;
+    color: white;
+    padding: 14px 12.2%;
+}
+
+.credits-footer > h1 {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.credits-footer > h2 {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.credits-footer > h3 {
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.quote {
+    text-align: center;
+    font-weight: bold;
+}
+
+a {
+    color:black;
+}
+
+
+.toggle-container {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;   
+}
+
+#button {
+    margin-right:15px;
+}
