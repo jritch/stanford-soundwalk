@@ -301,6 +301,7 @@ iframe {
     line-height: 18px;
     letter-spacing: 0em;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .credits-footer > h2 {
@@ -310,6 +311,7 @@ iframe {
     line-height: 18px;
     letter-spacing: 0em;
     text-align: center;
+    margin-bottom: 0px;
 }
 
 .credits-footer > h3 {
@@ -320,6 +322,7 @@ iframe {
     line-height: 18px;
     letter-spacing: 0em;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .container {

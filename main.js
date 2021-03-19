@@ -219,9 +219,7 @@ for (let index = 0; index < elements.length; index++) {
     });
 }
 
-// if (!rightTime()) {
-//     alert("Soundwalk is only available during daylight hours")
-//     document.getElementById("map").remove()
-//     document.getElementById("player").remove()
+if (!rightTime()) {
+    document.getElementById("alert").style.display = "block"
 
-// }
+}
