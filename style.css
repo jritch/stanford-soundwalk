@@ -3,10 +3,14 @@ body {
     margin: 0;
 }
 
-#map, #curtain {
+#map, .curtain {
     height: 450px;
     width: 100%;
     margin: auto;
+}
+
+#stop-button {
+    position: absolute; top:22px; left:22px;
 }
 
 .map-holder {
@@ -24,9 +28,23 @@ body {
     background-color: #EAEAEA;
 }
 
+#audio_control {
+    position: absolute;
+    top:10px;
+    left: 10px;
+}
 
 #map {
     z-index: 0;  
+}
+
+.curtain {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top:0px;
+    left: 0px;
 }
 
 #curtain {
@@ -285,7 +303,57 @@ iframe {
     padding-bottom: 15px;
 }
 
+.center-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.center-right-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+}
+
+.center-left-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: right;
+}
+
+#left_arrow, #right_arrow {
+    width: 60px;
+    margin-top: -35px;
+}
+
+#left-arrow{
+    margin-left: -80px;
+}
+
+#right-arrow{
+    margin-left: -80px;
+}
+
+#gallery_caption {
+    /* Palm Drive */
+
+    padding-top: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 17px;
+    
+
+    color: #000000;
+
+
+}
+
+.img-square {
+    width: 100%;
+    max-width: 200px;
+}
 
 .credits-footer {
     background: #767674;

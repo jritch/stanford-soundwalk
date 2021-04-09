@@ -30,8 +30,7 @@
 
 
 </head>
-
-
+<body>
 <div class="container container-fluid">
    <div class="row">
        <div class="col-12 header">
@@ -117,6 +116,9 @@
             Joining the Soundwalk is part of a shared communal experience dedicated to remembering those who have been lost to COVID, including a new site-specific art installation that will be built over the Spring Quarter.
             <br><br>
             The Stanford Soundwalk is currently an opportunity for those Stanford community members already approved to be on campus. If you are off campus, you are welcome to listen to the playlist here, as well as send us your COVID19 audio story at <a href="mailto:medicineandthemuse@stanford.edu"><b>medicineandthemuse@stanford.edu</b></a>.
+            <br><br>
+            <b>Parking:</b> The closest parking to the start of the walk is in downtown Palo Alto, either at the CalTrain lot on Alma Street (a paid lot), along Alma Street, on High Street, or on University Avenue. Parking on Palo Alto streets is free for a two-hour period.
+        
         </div>
     </div>
 
@@ -138,24 +140,35 @@
             </div>
             Your browser will display a map showing the route and your position. The start of the journey is at the corner of <b>University Avenue and El Camino Rd.</b>
             <br><br>
-            Click on the <b>Soundcloud Player</b> below to start the Soundwalk. Select "Listen in Browser" if prompted.
+            Click on the <b>Soundcloud Player</b> below to start the Soundwalk. Select <b>Listen in Browser</b> if prompted. A specially-curated music playlist will play as you travel around the map.
             <br><br>
-            A specially-curated music playlist will play as you travel around the map. <b>Touch the markers on the map</b> when you are nearby to listen to content chosen for those locations. 
+            <b>Touch the markers on the map</b> when you are nearby to listen to content chosen for those locations. 
         </div>
         <div class="col-12 text-section toggle-container">
             <div id="button" class="toggle">
-                <p style="margin:5px">Toggle Playlist</p>
+                <p style="margin:5px">Expand Playlist</p>
             </div>
         </div>
         <div class="col-12 iframe-holder">
-            <iframe style="" id="player" scrolling="no" frameborder="yes" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1180824898&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> 
+            <iframe style="" id="player" scrolling="no" frameborder="yes" auto_play="false" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1180824898&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> 
         </div>
         <div class="map-holder col-12" style="position: relative;">
             <div id="map"></div>
-            <img src="icons/stop.png" id="stop-button" width="40" height="40" style="position: absolute; top:400px; left:22px">
+            <div class="curtain" style="display: none;"></div>
+            <img src="icons/stop.png" id="stop-button" width="40" height="40" style="visibility:hidden;">
+            
+            <audio id="cactus_garden" src="audio/cactus_garden.mp3" preload="auto"></audio>
+            <audio id="stanford_mausoleum" src="audio/stanford_mausoleum.mp3" preload="auto"></audio>
+            <audio id="angel_of_grief" src="audio/angel_of_grief.mp3" preload="auto"></audio>
         </div>
+        
     </div>
 
+    <div class="row">
+        <div class="col-12 text-section" style="text-align: center;">
+            See below for <b><a href="#photos">photos</a></b> corresponding to the markers along the route to help you navigate.
+        </div>
+    </div>
 
     <div class="row">
         <div id="directions" class="col-12 header header-small">
@@ -187,7 +200,16 @@
             <div class="img-bullet-wrapper">
                 <div class="arrow-bullet"><img src="icons/right-arrow.svg" alt="Person wearing headphones"></div>
                 <div class="arrow-bullet-caption">
-                    When you arrive at Campus Drive, take a sharp right. Walk down the tree-lined path away from the road.                 
+                    When you arrive at Campus Drive, take a sharp right between the Griffins. Walk down the tree-lined path away from the road.                 
+                </div>
+            </div>        
+        </div>
+
+        <div class="col-12">
+            <div class="img-bullet-wrapper">
+                <div class="arrow-bullet"><img src="icons/straight-arrow.svg" alt="Person wearing headphones"></div>
+                <div class="arrow-bullet-caption">
+                    The Mausoleum is directly in front of you. When you arrive, stop here and <b>touch marker A on the map</b>.                 
                 </div>
             </div>        
         </div>
@@ -196,7 +218,7 @@
             <div class="img-bullet-wrapper">
                 <div class="arrow-bullet"><img src="icons/left-arrow.svg" alt="Person wearing headphones"></div>
                 <div class="arrow-bullet-caption">
-                    When you arrive at the fork in the road, turn left. Walk down the path to the Arizona Cactus Garden.                  
+                    To the left of the Mausoleum is the Arizona Cactus Garden.               
                 </div>
             </div>        
         </div>
@@ -205,7 +227,7 @@
             <div class="img-bullet-wrapper">
                 <div class="arrow-bullet"><img src="icons/loop-arrow.svg" alt="Person wearing headphones"></div>
                 <div class="arrow-bullet-caption">
-                    <b>Touch marker A on the map</b> and listen as you walk around the Cactus Garden Oval.            
+                    <b>Touch marker B on the map</b> and listen as you walk around the Cactus Garden Oval.            
                 </div>
             </div>        
         </div>
@@ -214,7 +236,7 @@
             <div class="img-bullet-wrapper">
                 <div class="arrow-bullet"><img src="icons/right-arrow.svg" alt="Person wearing headphones"></div>
                 <div class="arrow-bullet-caption">
-                    Exit the Cactus Garden, turning right, and walk to the Stanford Family Mausoleum. Stop here and <b>touch marker B on the map</b>.            
+                    Exit the Cactus Garden where you came in, walking back past the Mausoleum.          
                 </div>
             </div>        
         </div>
@@ -223,7 +245,7 @@
             <div class="img-bullet-wrapper">
                 <div class="arrow-bullet"><img src="icons/straight-arrow.svg" alt="Person wearing headphones"></div>
                 <div class="arrow-bullet-caption">
-                    Return to the path and continue towards the Angel of Grief, keeping right. At the Angel, <b>touch marker C on the map</b>.   
+                    Return to the path and continue towards the Angel of Grief, keeping right. At the Angel, <b>touch marker C on the map</b>. This is the end of the Soundwalk.
                 </div>
             </div>        
         </div>
@@ -232,8 +254,7 @@
             <div class="img-bullet-wrapper">
                 <div class="arrow-bullet"><img src="icons/left-arrow.svg" alt="Person wearing headphones"></div>
                 <div class="arrow-bullet-caption">
-                    Leaving the Angel, turn left at the fork and walk down the path to Palm Drive and Arboretum.   
-                </div>
+                    To return to the start marker, leave the Angel the way that you came, turn left at the fork and walk back down the path to Palm Drive and Arboretum.                 </div>
             </div>        
         </div>
 
@@ -241,16 +262,33 @@
             <div class="img-bullet-wrapper">
                 <div class="arrow-bullet"><img src="icons/straight-arrow.svg" alt="Person wearing headphones"></div>
                 <div class="arrow-bullet-caption">
-                    Continue straight along Palm Drive until you return to the start of the Soundwalk.   
+                    Continue straight along Palm Drive until you return to the start point.
                 </div>
             </div>        
         </div>
         
     </div>
 
+    <div class="row" style="background-color: #EAEAEA;">
+        <div class="col-3 center-icon">
+            <img id="left_arrow" src="icons/left-gallery-arrow.svg">
+        </div>
+        <div class="col-6 center-icon">
+            <div style="text-align: center;">
+                <img src="icons/tour-start-square.png" class="img-square" id="gallery_image">
+                <p id="gallery_caption">The view from the start of the tour</p>
+            </div>
+        </div>
+        <div class="col-3 center-icon"> 
+            <img id="right_arrow" src="icons/right-gallery-arrow.svg">
+        </div>
+    </div>
+
+    
 
 
-    <div class="row">
+
+    <div class="row" id="photos">
         <div id="story" class="col-12 header header-small">
             <div class="img-bullet-wrapper">
                 <img class="img-bullet" src="icons/share your story icon 2.svg" alt="Person wearing headphones">
@@ -291,10 +329,11 @@
 
 
 
+
     <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
     <script src="main.js"></script>
   
 
 
-
+</body>
 </html>

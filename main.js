@@ -5,17 +5,48 @@
 
 // to be played when you click on the marker or are in the proper position
 points_of_interest =
-    [["Cactus Garden", [37.43592311670526, -122.17107926201443], 38, "cactus_garden.mp3",0],
-    ["Stanford Mausoleum", [37.4364654, -122.1698852], 20, "stanford_mausoleum.mp3",0],
-    ["Angel of Grief", [37.4373239, -122.1688938], 20, "angel_of_grief.mp3",0],
+    [
+        ["Stanford Mausoleum", [37.4364654, -122.1698852], 20, "stanford_mausoleum",0],
+        ["Cactus Garden", [37.43592311670526, -122.17107926201443], 38, "cactus_garden",0],
+        ["Angel of Grief", [37.4373239, -122.1688938], 20, "angel_of_grief",0]
     ]
     
+images = 
+    [
+        ["icons/tour-start-square.png","The view from the start of the tour"],
+        ["icons/palm-drive-square.jpeg","The view as you walk down Palm Drive"],
+        ["icons/griffin-square.jpg","Turn right, off Palm Drive, at the Griffins"],
+        ["icons/mausoleum-square.jpeg","Location A: The Stanford Mausoleum"],
+        ["icons/cactus-square.png","Location B: The Arizona Cactus Garden"],
+        ["icons/angel-of-grief-square.jpg","Location C: The Angel of Grief"],
+        ["icons/return-square.png","Follow the arrow to return to the start point"],
+    ]
 
-// points_of_interest =
-//     [["Stanford Mausoleum", [45.37779628811677, -75.67558200575988], 20, "stanford_mausoleum.mp3",0],
-//     ["Angel of Grief", [45.37738595903921, -75.6744895594049], 50, "angel_of_grief.mp3",0],
-//     ["Cactus Garden", [45.376213573838925, -75.67429989857938],20, "cactus_garden.mp3",0],
-//     ["Palm Drive and Campus Drive", [45.37624554830319, -75.67533165347018], 40, "campus_drive.mp3",0]]
+image_index = 0;
+
+document.getElementById("left_arrow").addEventListener("click", function () {
+    if (image_index == 0) {return;}
+    else {
+        image_index = image_index - 1;
+        update_image();
+    }
+})
+
+document.getElementById("right_arrow").addEventListener("click", function () {
+    if (image_index == images.length - 1) {return;}
+    else {
+        image_index = image_index + 1;
+        update_image();
+    }
+})
+
+function  update_image() {
+    image = document.getElementById("gallery_image");
+    image.setAttribute("src",images[image_index][0]);
+    caption = document.getElementById("gallery_caption");
+    caption.innerHTML = images[image_index][1];
+}
+
 
 
 var iframeElement   = document.querySelector('iframe');
@@ -23,81 +54,51 @@ var widget         = SC.Widget(iframeElement);
 
 widget.bind(SC.Widget.Events.PLAY, function() {
     if (audio) {
-        audio.remove()
+        //playNext(null);
+        audio.pause();
     }
 });
 
-
-// to be played on a continuous loop while you are not near a point-of-interest    
-//playlist = ["1_bach1.mp3","2_haydn1.mp3","3_sano1.mp3","4_delius1.mp3","5_evans1.mp3","6_haydn2.mp3","7_bach2.mp3","8_sano2.mp3","9_haydn3.mp3","10_walker1.mp3","11_bach3.mp3"];
-
-// takes as input a filename
-// returns a function that, when called,
-// removes the current audio element, adds a new audio element
-// and starts playing it
-// also adds a listener to advance to the next song in the playlist when the track ends
 function audioPlayFactory(name) {
     return function () {
-        audio = document.getElementById("audio");
+        
+        audio = document.getElementById(name);
+        map = document.getElementById("map");
+        map_holder = document.getElementsByClassName("map-holder")[0];
+        curtain = document.getElementsByClassName("curtain")[0];
+        stop_button = document.getElementById("stop-button")
 
-        if (audio) {
-            audio.remove();
-        }
-    
-        audio = new Audio('audio/' + name);
-        audio.setAttribute("id", "audio");
+        curtain.setAttribute("style","display:block;")
+        stop_button.setAttribute("style","visibility:auto;")
+
         audio.onended = playNext;
-        document.body.appendChild(audio);
-    
+        
+        audio.setAttribute("controls","true")
+        audio.setAttribute("style","position:absolute; left: " + (map_holder.clientWidth - audio.clientWidth ) / 2 + "px; top: " + (map.clientHeight - audio.clientHeight ) / 2 + "px;")
+
         widget.pause()
         audio.play();
     };
 }
 
+function removePlayer () {
+    curtain = document.getElementsByClassName("curtain")[0];
+    curtain.setAttribute("style","display:none;")
+    
+    stop_button = document.getElementById("stop-button")
+    stop_button.setAttribute("style","visibility:hidden;")
+
+
+    audio.removeAttribute("controls")
+    audio.pause();
+}
+
 // called when you press forward or when an audio track ends
 function playNext() {
-    //playlist_position = (playlist_position + 1) % playlist.length;
-    //f = audioPlayFactory(playlist[playlist_position]);
-    //f();
-   widget.play()
+    removePlayer();
+    widget.play();
 };
 
-
-
-// play the intro (for now the first song in the playlist, soon the intro + directions)
-// function tourStart() {
-//     f = audioPlayFactory(playlist[playlist_position]);
-//     f();
-//     document.getElementById("start-button").remove();
-//     document.getElementById("curtain").remove();
-// }
-
-// compare latlng
-// function nearPointOfInterestTrigger(user_position) {
-//     for (i = 0; i < points_of_interest.length; i++) {
-//         item = points_of_interest[i];
-//         latlng = new L.LatLng(item[1][0], item[1][1]);
-        
-//          //for debugging - show radius at each point 
-//         //L.circle(latlng, item[2]).addTo(map);
-        
-//         // if you're within the radius 
-//         // and not already playing the file
-//         // then play the file
-//         if (user_position.distanceTo(latlng) < item[2]) {
-//             audio = document.getElementById("audio")
-//             if (audio) {
-//                 if ((audio.getAttribute("src") != "audio/" + item[3]) && item[4] == 0)
-//                 {
-//                     item[4] = 1;
-//                     f = audioPlayFactory(item[3]); 
-//                     f();
-//                 } 
-//             }
-//             return;
-//         }
-//     }
-// }
 
 tmp = 0 
 
@@ -182,21 +183,7 @@ var new_icon = L.icon({
 
 L.marker(new L.LatLng(37.44174,-122.1656), {icon:new_icon}).addTo(map);
 
-
-// // add button behavior
-// document.getElementById("start-button").addEventListener("click", tourStart)
-// document.getElementById("forward").addEventListener("click", playNext)
-
-// document.getElementById("play").addEventListener("click", function () { 
-//     audio = document.getElementById("audio"); audio.play(); })
-
-// document.getElementById("pause").addEventListener("click", function () { 
-//     audio = document.getElementById("audio"); audio.pause(); })
-
-
-document.getElementById("stop-button").addEventListener("click", function () { 
-         audio = document.getElementById("audio"); audio.pause(); })
-
+document.getElementById("stop-button").addEventListener("click", removePlayer)
 
 
 document.getElementById("button").addEventListener("click", function () {
@@ -223,3 +210,4 @@ if (!rightTime()) {
     document.getElementById("alert").style.display = "block"
 
 }
+

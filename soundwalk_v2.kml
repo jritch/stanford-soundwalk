@@ -45,6 +45,34 @@
         <styleUrl>#icon-1899-DB4436-nodesc-highlight</styleUrl>
       </Pair>
     </StyleMap>
+    <Style id="line-000000-1200-nodesc-normal">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.2</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-000000-1200-nodesc-highlight">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.8</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-000000-1200-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-000000-1200-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-000000-1200-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
     <Style id="line-1267FF-5000-nodesc-normal">
       <LineStyle>
         <color>ffff6712</color>
@@ -74,9 +102,9 @@
       </Pair>
     </StyleMap>
     <Folder>
-      <name>soundwalk</name>
+      <name>Directions from Angel of Grief, Palo Alto, CA, USA to 3-7 Palm Dr, Stanford, CA 94305, USA</name>
       <Placemark>
-        <name>soundwalk</name>
+        <name>Directions from Angel of Grief, Palo Alto, CA, USA to 3-7 Palm Dr, Stanford, CA 94305, USA</name>
         <styleUrl>#line-1267FF-5000-nodesc</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -180,6 +208,63 @@
             -122.16884,37.43555,0
             -122.16829,37.43508,0
             -122.16797,37.43478,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Angel of Grief, Palo Alto, CA, USA</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -122.1688938,37.4373239,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Stanford Mausoleum, Palo Alto, CA, USA</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -122.1698852,37.4364654,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cactus Garden Path, Palo Alto, CA 94304, USA</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -122.1714515,37.4358953,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cactus Garden Path, Palo Alto, CA 94304, USA</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -122.1708413,37.4357365,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>3-7 Palm Dr, Stanford, CA 94305, USA</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -122.1679703,37.4347807,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Line 1</name>
+        <styleUrl>#line-000000-1200-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
             -122.167973,37.4347809,0
             -122.1669058,37.4379993,0
             -122.1658438,37.4411964,0
