@@ -142,14 +142,14 @@ var map = L.map('map').fitWorld();
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoianJpdGNoIiwiYSI6ImNrbDE5YWp1YzByNTUydm1pemp4NWo2NGcifQ.UqOkdnWMNCF3tWfPTB_4UQ', {
     attribution: '',
-    maxZoom: 18,
+    maxZoom: 17,
     tileSize: 512,
     zoomOffset: -1,
     id: 'mapbox/streets-v11',
 }).addTo(map);
 
 
-map.setView(new L.LatLng(37.438417408658916, -122.1684), 16);
+map.setView(new L.LatLng(37.4386, -122.1684), 16);
 //map.setView(new L.LatLng(45.37785682716759, -75.6749549661014), 16);
 
 omnivore.kml('soundwalk.kml').addTo(map);
