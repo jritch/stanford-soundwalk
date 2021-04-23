@@ -176,9 +176,9 @@ for (i = 0; i < points_of_interest.length; i++) {
 
 
 var new_icon = L.icon({
-    iconUrl: 'icons/arrow.png',
-    iconSize:   [25, 40], // point of the icon which will correspond to marker's location
-    iconAnchor:   [12.5, 40], // point of the icon which will correspond to marker's location
+    iconUrl: 'icons/start.svg',
+    iconSize:   [19, 19], // point of the icon which will correspond to marker's location
+    iconAnchor:   [19/2, 19/2], // point of the icon which will correspond to marker's location
 });
 
 L.marker(new L.LatLng(37.44174,-122.1656), {icon:new_icon}).addTo(map);
@@ -211,3 +211,10 @@ if (!rightTime()) {
 
 }
 
+url = window.location.href
+
+if (url.includes("#start")) {
+    audioPlayFactory("stanford_mausoleum")()
+    elmnt = document.getElementById("map");
+    elmnt.scrollIntoView();
+}
