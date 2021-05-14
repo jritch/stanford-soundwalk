@@ -219,24 +219,24 @@ url = window.location.href
 //     elmnt.scrollIntoView();
 // }
 
-if (url.includes("#1")) {
-    alert("#1")
-    audioPlayFactory("stanford_mausoleum")()
-    elmnt = document.getElementById("map");
-    elmnt.scrollIntoView();
-}
+// if (url.includes("#1")) {
+//     alert("#1")
+//     audioPlayFactory("stanford_mausoleum")()
+//     elmnt = document.getElementById("map");
+//     elmnt.scrollIntoView();
+// }
 
 
-if (url.includes("#2")) {
-    alert("#2")
-}
+// if (url.includes("#2")) {
+//     alert("#2")
+// }
 
 
-if (url.includes("#3")) {
-    alert("#3")
-}
+// if (url.includes("#3")) {
+//     alert("#3")
+// }
 
 
-if (url.includes("#4")) {
-    alert("#4")
-}
+// if (url.includes("#4")) {
+//     alert("#4")
+// }
