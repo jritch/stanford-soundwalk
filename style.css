@@ -228,6 +228,23 @@ iframe {
      border-left: 2.5px solid #EAEAEA;
 }
 
+
+.splash-petal {
+    background-image: url(icons/petal.jpg);
+     background-size: cover;
+     background-position: left center;
+     height: 167px;  
+     border-right: 2.5px solid #EAEAEA;
+}
+
+.splash-stump {
+    background-image: url(icons/stump.jpeg);
+     background-size: cover;
+     background-position: right center;
+     height: 167px;
+     border-left: 2.5px solid #EAEAEA;
+}
+
 .text-section {
     background-color: #EAEAEA;
     font-family: Roboto;
