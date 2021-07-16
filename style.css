@@ -212,6 +212,15 @@ iframe {
      height: 260px;
 }
 
+.volunteer-photo {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 5px;
+
+}
+
+
 .splash-guy {
     background-image: url(icons/cactus_guy.jpg);
      background-size: cover;
